@@ -1,0 +1,7 @@
+<!-- filepath: c:\Green_financing\src\my-app\src\assets\analytics.svg -->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="44" width="8" height="8" fill="#1976d2"/>
+  <rect x="28" y="36" width="8" height="16" fill="#1976d2"/>
+  <rect x="44" y="28" width="8" height="24" fill="#1976d2"/>
+  <rect x="8" y="52" width="48" height="4" fill="#e3f2fd"/>
+</svg>
