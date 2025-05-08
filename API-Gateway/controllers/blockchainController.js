@@ -3,6 +3,8 @@ require('dotenv').config();
 const contractABI = require('../abi/GreenFinancingABI.json');
 
 console.log(process.env.RPC_NODE_URL);
+//set up user
+const User = require('../models/User');
 // Set up wallet and provider
 const provider = new JsonRpcProvider(process.env.RPC_NODE_URL);
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
@@ -10,6 +12,40 @@ const contributorWallet = new ethers.Wallet(process.env.CONTRIBUTOR_PRIVATE_KEY,
 const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS, contractABI.abi, wallet);
 // Get contract instance connected with contributor's wallet
 const ContributorContract = new ethers.Contract(process.env.CONTRACT_ADDRESS, contractABI.abi, contributorWallet);
+
+//controller function to get user info
+const signup = async (req, res) => {
+    try {
+        const { username, email, password, wallet, organization } = req.body;
+        // Optionally: hash password here before saving
+        const user = new User({ username, email, password, wallet, organization });
+        await user.save();
+        res.status(201).json({ message: 'Signup successful' });
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+};
+
+//controller function to login user
+const login = async (req, res) => {
+    try {
+        const { email, password, wallet } = req.body;
+        // Find user by email
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(401).json({ error: "Invalid email or password." });
+        }
+        // Check password and wallet address
+        if (user.password !== password || user.wallet !== wallet) {
+            return res.status(401).json({ error: "Invalid email, password, or wallet address." });
+        }
+        // On success, return user info (omit password)
+        const { password: _, ...userData } = user.toObject();
+        res.json({ message: "Login successful", user: userData });
+    } catch (err) {
+        res.status(500).json({ error: "Server error" });
+    }
+};
 
 // Controller function to get the project details
 const getProjectDetails = async (req, res) => {
@@ -114,6 +150,8 @@ const getContractBalance = async (req, res) => {
 };
 
 module.exports = {
+    signup,
+    login, 
     getProjectDetails,
     contributeFunds,
     startProject,

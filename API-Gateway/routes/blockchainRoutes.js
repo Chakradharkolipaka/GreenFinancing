@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const {
+    signup,
+    login, 
     getProjectDetails,
     contributeFunds,
     startProject,
@@ -8,6 +10,12 @@ const {
     withdrawFunds,
     getContractBalance,
 } = require('../controllers/blockchainController');
+
+// Route to post user info
+router.post('/signup', signup);
+
+// Route to login
+router.post('/login', login); 
 
 // Route to get project details
 router.get('/projectDetails', getProjectDetails);
