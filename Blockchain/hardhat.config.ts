@@ -27,6 +27,13 @@ const config: HardhatUserConfig = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       timeout: 200_000,
     },
+    ganache: {
+      url:process.env.GANACHE_RPC_URL || "http://127.0.0.1:7545",
+      chainId: 1337,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      timeout: 200_000,
+      },
   },
 };
 

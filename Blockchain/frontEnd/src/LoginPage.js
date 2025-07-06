@@ -25,7 +25,7 @@ function LoginPage() {
       const data = await response.json();
       if (response.ok) {
         alert("Login successful! Welcome, " + data.user.username);
-        navigate("/");
+        navigate("/userhomepage");
       } else {
         setError(data.error || "Login failed.");
       }

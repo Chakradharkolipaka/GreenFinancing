@@ -1,0 +1,66 @@
+/* HomePage.css - Consistent with AdminHomePage.css for layout and style */
+
+.homepage-container {
+  min-height: 100vh;
+  background: #f4f8fb;
+  padding: 40px 0;
+}
+
+.homepage-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e90ff;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  margin: 0 auto 32px auto;
+  max-width: 900px;
+}
+
+.dashboard-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 20px 16px;
+  min-width: 220px;
+  max-width: 300px;
+  flex: 1 1 220px;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(30,144,255,0.12);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e90ff;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}

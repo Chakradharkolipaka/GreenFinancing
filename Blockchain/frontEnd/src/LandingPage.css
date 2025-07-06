@@ -75,6 +75,49 @@ nav {
   transform: scale(1.08);
 }
 
+.signin-dropdown-wrapper {
+  position: relative;
+}
+
+.signin-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(25,118,210,0.13), 0 1.5px 6px rgba(56,142,60,0.10);
+  min-width: 170px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  animation: dropdownFadeIn 0.25s;
+  padding: 0.5rem 0;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.dropdown-item {
+  background: none;
+  border: none;
+  color: #256029;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  border-radius: 6px;
+}
+
+.dropdown-item:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
 .landing-main {
   flex: 1;
   display: flex;

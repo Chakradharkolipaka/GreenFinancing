@@ -1,0 +1,201 @@
+/* GetProjectDetails.css - Reference for form sizing and layout */
+
+.form-container {
+  width: 400px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-input, .form-select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-button:hover {
+  background: #1565c0;
+}
+
+.form-error {
+  color: #e53935;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-success {
+  color: #43a047;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Improved button style for fetch project details */
+.fetch-details-btn {
+  background: linear-gradient(90deg, #1976d2 0%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 1rem auto 0 auto;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  cursor: pointer;
+  display: block;
+}
+.fetch-details-btn:hover {
+  background: linear-gradient(90deg, #388e3c 0%, #1976d2 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Center and style popup content */
+.details-form-modal .modal-content {
+  /* Increase popup size and use a light, non-gradient background for modern look */
+  min-width: 520px;
+  max-width: 98vw;
+  min-height: 420px;
+  background: #fafdff; /* lighter version, matches UploadProjectForm */
+  border-radius: 20px;
+  padding: 2.7rem 2.2rem;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+body, html {
+  background: #fcfeff !important; /* even lighter for the rest of the page */
+}
+
+/* Center and stack all form values */
+.get-project-details-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.get-project-details-form > * {
+  width: 100%;
+  max-width: 350px;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+.get-project-details-form input,
+.get-project-details-form textarea {
+  min-height: 28px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: #f8fafc;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 6px #e0e0e033;
+  text-align: center;
+}
+.get-project-details-form textarea {
+  min-height: 48px;
+  resize: vertical;
+}
+.get-project-details-form input:focus,
+.get-project-details-form textarea:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 2px 12px #1976d222;
+}
+
+/* Center project details content in popup */
+.project-details-content {
+  max-width: 480px;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-size: 1.08rem;
+  word-break: break-word;
+}
+.project-details-content > * {
+  margin: 0.5rem 0;
+}
+
+/* Make contract balance more prominent and larger */
+.project-details-content .contract-balance {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #1976d2;
+  margin: 2.2rem 0 1.4rem 0;
+  background: #e3f2fd;
+  border-radius: 18px;
+  padding: 1.7rem 3.2rem;
+  display: inline-block;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 24px #1976d222;
+}
+
+/* Popup/modal hover trigger styles */
+
+/* Hide modal by default, show on hover of trigger */
+.details-form-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+}
+
+/* Show modal when parent or trigger is hovered, with delay */
+.popup-hover-trigger:hover + .details-form-modal,
+.popup-hover-trigger:focus + .details-form-modal {
+  display: flex;
+  animation: popupFadeIn 0.35s 0.35s both; /* 350ms delay */
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Optional: pointer-events for modal to allow closing on click outside */
+.details-form-modal {
+  pointer-events: auto;
+}

@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose'); // Add this line
 const blockchainRoutes = require('./routes/blockchainRoutes');
@@ -15,14 +16,9 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch((err) => console.error('MongoDB connection error:', err));
 
 app.use(express.json());
+app.use(cors()); 
 app.use('/api/blockchain/', blockchainRoutes);
 
-// // Define a root route
-// app.get('/', (req, res) => {
-//   res.send('Welcome to the Blockchain API! Use /api/blockchain/election-name to get the election name.');
-// });
-
-// Start the server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

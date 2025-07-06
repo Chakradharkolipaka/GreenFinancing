@@ -79,6 +79,13 @@ contract GreenFinancing {
         return contributors[_contributor];
     }
 
+    // Function to get project details
+    function getProjectDetails() public view returns (
+        address, uint256, uint256, uint256, bool
+    ) {
+        return (owner, projectCost, totalFundsRaised, fundsAllocated, projectStarted);
+    }
+
     // Fallback function to accept any accidental ether sent to the contract
     receive() external payable {
         contribute();

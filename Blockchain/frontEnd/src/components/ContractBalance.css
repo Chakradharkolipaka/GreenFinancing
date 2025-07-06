@@ -1,0 +1,101 @@
+/* ContractBalance.css - Consistent with other form components */
+
+.balance-container {
+  width: 400px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.balance-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.balance-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e90ff;
+  margin-bottom: 8px;
+}
+
+.balance-label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* Larger and more readable contract balance popup */
+.contract-balance-modal .modal-content {
+  background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 420px;
+  max-width: 99vw;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contract-balance-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contract-balance-form > * {
+  width: 100%;
+  max-width: 350px;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+.contract-balance-form input {
+  min-height: 28px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: #f8fafc;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 6px #e0e0e033;
+  text-align: center;
+}
+.contract-balance-form input:focus {
+  border: 1.5px solid #8fd3f4;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 2px 12px #8fd3f422;
+}
+
+.contract-balance-form button {
+  background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+  color: #00695c;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.5rem auto 0 auto;
+  box-shadow: 0 2px 8px rgba(56,142,60,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  cursor: pointer;
+  display: block;
+}
+.contract-balance-form button:hover {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+  color: #1976d2;
+  transform: translateY(-2px) scale(1.04);
+}

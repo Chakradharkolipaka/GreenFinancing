@@ -1,0 +1,156 @@
+/* WithdrawFundsForm.css - Consistent with GetProjectDetails.css for form sizing and layout */
+
+.form-container {
+  width: 400px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-button:hover {
+  background: #1565c0;
+}
+
+.form-error {
+  color: #e53935;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-success {
+  color: #43a047;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Improved button style for WithdrawFundsForm */
+.withdraw-funds-form button {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  color: #b71c1c;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.5rem auto 0 auto;
+  box-shadow: 0 2px 8px rgba(255,88,88,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  cursor: pointer;
+  display: block;
+}
+.withdraw-funds-form button:hover {
+  background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Ensure Withdraw Funds form is perfectly centered and stacked */
+.withdraw-form-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 380px;
+  max-width: 98vw;
+  margin: 0 auto;
+  box-shadow: none;
+}
+.withdraw-funds-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.1rem;
+}
+.withdraw-funds-form-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+.withdraw-funds-form > * {
+  width: 100%;
+  max-width: 350px;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+/* Improve input style */
+.withdraw-funds-form input,
+.withdraw-funds-form textarea {
+  min-height: 28px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: #f8fafc;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 6px #e0e0e033;
+  text-align: center;
+}
+.withdraw-funds-form textarea {
+  min-height: 48px;
+  resize: vertical;
+}
+.withdraw-funds-form input:focus,
+.withdraw-funds-form textarea:focus {
+  border: 1.5px solid #ff5858;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 2px 12px #ff585822;
+}
+
+/* Modal background for withdraw funds form */
+.withdraw-form-modal .modal-content {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

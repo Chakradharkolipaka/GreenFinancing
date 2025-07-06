@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
@@ -14,6 +14,18 @@ function LandingPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [wallet, setWallet] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownTimeout = useRef();
+
+  // Dropdown handlers
+  const handleDropdownEnter = () => {
+    clearTimeout(dropdownTimeout.current);
+    dropdownTimeout.current = setTimeout(() => setShowDropdown(true), 180);
+  };
+  const handleDropdownLeave = () => {
+    clearTimeout(dropdownTimeout.current);
+    dropdownTimeout.current = setTimeout(() => setShowDropdown(false), 250);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,7 +64,46 @@ function LandingPage() {
           <button className="nav-btn" onClick={() => document.getElementById("about").scrollIntoView({behavior: "smooth"})}>About</button>
           <button className="nav-btn" onClick={() => document.getElementById("features").scrollIntoView({behavior: "smooth"})}>Features</button>
           <button className="nav-btn" onClick={() => document.getElementById("contact").scrollIntoView({behavior: "smooth"})}>Contact</button>
-          <button className="sign-in-btn" onClick={() => navigate("/login")}>Sign In</button>
+          <div
+            className="signin-dropdown-wrapper"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleDropdownLeave}
+            tabIndex={0}
+            onFocus={handleDropdownEnter}
+            onBlur={handleDropdownLeave}
+            style={{ position: "relative", display: "inline-block" }}
+          >
+            <button
+              className="sign-in-btn"
+              onClick={() => setShowDropdown((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={showDropdown}
+            >
+              Sign In
+            </button>
+            {showDropdown && (
+              <div className="signin-dropdown">
+                <button
+                  className="dropdown-item"
+                  onClick={() => {
+                    setShowDropdown(false);
+                    navigate("/login");
+                  }}
+                >
+                  User Sign In
+                </button>
+                <button
+                  className="dropdown-item"
+                  onClick={() => {
+                    setShowDropdown(false);
+                    navigate("/adminloginpage");
+                  }}
+                >
+                  Admin Sign In
+                </button>
+              </div>
+            )}
+          </div>
         </nav>
       </header>
 
