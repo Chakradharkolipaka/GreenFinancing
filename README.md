@@ -1,4 +1,4 @@
-GreenFinancing is a web-based platform that leverages blockchain and smart contract technology to promote and manage sustainable financing. It aims to provide transparent, secure, and efficient financial tools for investments in eco-friendly and sustainable projects. By integrating decentralized finance (DeFi) principles and modern web technologies, GreenFinancing assists users and organizations in monitoring, funding, and assessing green initiatives using an immutable ledger system.
+GreenFinancing is a dApp (decentralisesd Application) that leverages blockchain and smart contract technology to promote and manage sustainable financing. It aims to provide transparent, secure, and efficient financial tools for investments in eco-friendly and sustainable projects. GreenFinancing assists users and organizations in monitoring, funding, and assessing green initiatives using an immutable ledger system.
 
 Key Features
 Blockchain-Enabled Transactions
