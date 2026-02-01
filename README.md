@@ -1,30 +1,54 @@
 GreenFinancing is a dApp (decentralized Application) that leverages blockchain and smart contract technology to promote and manage sustainable financing. It aims to provide transparent, secure, and efficient financial tools for investments in eco-friendly and sustainable projects. GreenFinancing assists users and organizations in monitoring, funding, and assessing green initiatives using an immutable ledger system.
 
-Key Features
-Blockchain-Enabled Transactions
+Admin :
 
-Ensures all financing activities are transparent, secure, and traceable via blockchain records.
+=> Adds and manages green projects
 
-Smart Contract Automation
+=> Verifies project authenticity
 
-Integrates Solidity-based smart contracts to automate and secure funding and repayment mechanisms for green projects.
+=> Updates funding goals and project details
 
-Modern Web Frontend
 
-Provides a user-friendly interface for managing, tracking, and evaluating green investments using popular frontend frameworks and technologies.
+Users / Investors :
 
-Investment Tracking
+=> Browse admin-listed green projects
 
-Enables investors and project creators to monitor funding progress, performance metrics, and impact assessments of sustainable projects.
+=> Invest securely via blockchain
 
-DeFi and Transparency
+=> Track investments and project progress
 
-Implements decentralized finance concepts, enabling peer-to-peer funding, reduced intermediaries, and open access to financial products with a focus on sustainability.
 
-Multi-Language Support
+Key Features :
 
-Utilizes JavaScript, TypeScript, HTML, CSS, and Solidity for flexible integration with various blockchain solutions.
+=>  Blockchain-Enabled Transactions
+Transparent, secure, and fully traceable financing using immutable blockchain records.
 
-Potential for Expansion
+=>  Smart Contract Automation
+Solidity smart contracts automate funding logic and ensure secure execution.
 
-The platform features modular directories (such as API-Gateway and Blockchain), allowing for the addition of new green finance products or integration with external eco-friendly networks and data sources.
+=>  User-Friendly Interface
+Intuitive frontend for browsing projects, investing, and tracking portfolios.
+
+=>  Investment Tracking & Analytics
+Real-time monitoring of funding progress, performance, and sustainability impact.
+
+=>  DeFi-Driven Funding Model
+Peer-to-peer investments with reduced intermediaries and open financial access.(User to Admin)
+
+=>  Modular & Scalable Architecture
+Structured directories (API-Gateway, Blockchain) enable easy feature expansion and integrations.
+
+
+Technology Stack
+
+=> Blockchain: Ethereum
+
+=> Smart Contracts: Solidity
+
+=> Frontend: React.js
+
+=> Database: MongoDB
+
+=> Wallet Integration: MetaMask
+
+=> Web3 Library: Ethers.js
